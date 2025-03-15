@@ -1,0 +1,541 @@
+/**
+ * Pet Shop - WooCommerce Styles
+ * 
+ * Table of Contents:
+ * 1. General Shop Styles
+ * 2. Product Cards (Loop)
+ * 3. Single Product Page
+ * 4. Cart Page
+ * 5. Checkout Page
+ * 6. My Account Pages
+ * 7. Shop Widgets
+ * 8. Notices and Messages
+ */
+
+/* 1. General Shop Styles
+----------------------------------------- */
+
+.woocommerce-breadcrumb a {
+  transition: var(--fast-transition);
+}
+.woocommerce-breadcrumb a:hover {
+  color: var(--dark-grey) !important;
+}
+
+.product-page button {
+  padding: 0.7rem 1.2rem !important;
+  border-radius: var(--btn-border-radius) !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  transition: var(--fast-transition) !important;
+  border: none !important;
+  position: relative !important;
+  background-color: var(--primary-color) !important;
+  color: var(--white) !important;
+  border: 1px solid var(--primary-color) !important;
+}
+.product-page button:hover {
+  background-color: var(--white) !important;
+  color: var(--primary-color) !important;
+}
+
+.product-page .stock {
+  color: var(--primary-color) !important;
+}
+
+.quantity input {
+  /* width: 2rem;
+  height: 2rem; */
+  margin-right: 1rem;
+  border-radius: var(--btn-border-radius);
+  padding: 0.6rem 0;
+  font-size: 1rem;
+}
+
+.woocommerce-result-count,
+.woocommerce-ordering {
+  /* styles here */
+}
+
+/* 2. Product Cards (Pages and slider)
+----------------------------------------- */
+
+.wc-block-grid__products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap !important;
+  white-space: nowrap;
+}
+.slick-track {
+  position: relative;
+}
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-carousel,
+.adoption-carousel {
+  list-style: none;
+  width: 90%;
+}
+
+.products a,
+.wc-block-grid a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.woocommerce-loop-product__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wc-block-grid__product,
+.product-slide,
+.adoption-slide {
+  position: relative;
+  margin: 0.5rem !important;
+}
+
+.products li,
+.wc-block-grid li,
+.product-slide li,
+.adoption-carousel .adoption-card {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--light-grey);
+  text-align: center;
+  padding: 0.75rem !important;
+  height: 100%;
+  transition: var(--fast-transition);
+  background: var(--white);
+}
+.products li:hover,
+.product-slide li:hover,
+.adoption-carousel .adoption-card:hover {
+  scale: 1.05;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.products li img,
+.wc-block-grid li img,
+.product-slide li img,
+.adoption-carousel .adoption-card-image img {
+  margin-bottom: 0 !important;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--border-radius) !important;
+}
+
+.swiper-slide:hover img {
+  border-radius: var(--border-radius) !important;
+}
+.products h2,
+.wc-block-grid .wc-block-grid__product-title,
+.swiper-slide h2,
+.product-slide h2,
+.adoption-carousel .adoption-card .pet-name {
+  font-size: 1rem;
+  margin: 1rem !important;
+  padding: 0 !important;
+}
+.product-title-link,
+.woocommerce-loop-product__title {
+  cursor: pointer;
+  color: var(--black);
+  transition: var(--fast-transition);
+}
+.product-title-link:hover,
+.woocommerce-loop-product__title:hover {
+  color: var(--primary-color) !important;
+}
+.products .price,
+.wc-block-grid .price,
+.swiper-slide .wpcp-product-price,
+.product-slide .price,
+.product-page .price {
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+}
+.products .price ins,
+.wc-block-grid .price ins,
+.product-slide .price ins,
+.product-page ins {
+  color: var(--primary-color) !important;
+}
+.products .price ins,
+.products .price bdi,
+.wc-block-grid .price ins,
+.wc-block-grid .price bdi,
+.wc-block-grid .woocommerce-Price-amount,
+.product-slide .price ins,
+.product-slide .price bdi,
+.product-page bdi {
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  font-size: 1rem;
+}
+.product-page bdi {
+  font-size: 1.5rem;
+}
+
+.products .price del,
+.wc-block-grid .price del,
+.swiper-slide .wpcp-product-price del,
+.product-slide .price del,
+.product-page del {
+  color: var(--black) !important;
+  margin-right: 1rem;
+}
+
+.products li .button,
+.wc-block-grid li .wp-block-button__link,
+.swiper-slide .button,
+.swiper-slide .button a,
+.product-slide .button {
+  margin-top: 0.25rem !important;
+  padding: 0.7rem 1.2rem !important;
+  border-radius: var(--btn-border-radius) !important;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
+  cursor: pointer !important;
+  transition: var(--fast-transition) !important;
+  border: none !important;
+  background-color: var(--primary-color) !important;
+  color: var(--black) !important;
+  position: absolute !important;
+  top: 40% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  opacity: 0;
+  white-space: nowrap;
+}
+.products li:hover .button,
+.wc-block-grid li:hover .wp-block-button__link,
+.swiper-slide:hover .button,
+.product-slide:hover .button {
+  opacity: 1;
+}
+.products li .button:hover,
+.product-slide .button:hover {
+  background-color: var(--secondary-color) !important;
+  color: var(--black) !important;
+}
+
+.products .onsale,
+.product .onsale,
+.product-slide .onsale {
+  width: 3.5rem !important;
+  height: 1.6rem !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  font-size: 1rem !important;
+  background-color: var(--primary-color) !important;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--btn-border-radius) !important;
+  position: absolute !important;
+  left: 0.8rem !important;
+  top: 1.8rem !important;
+  transform: rotateZ(-45deg);
+}
+.product-page .onsale {
+  /* top: 1.8rem !important; */
+  width: 7rem !important;
+  height: 3rem !important;
+  font-size: 2.4rem !important;
+  left: 0rem !important;
+  top: 2rem !important;
+}
+
+/* 2. Product Cards (Slider specific)
+----------------------------------------- */
+
+.product-carousel-section {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.product-carousel-section .container {
+  /* width: 50%; */
+}
+
+.swiper-wrapper {
+  align-items: flex-start !important;
+  /* background: var(--primary-color); */
+}
+
+/* 3. Single Product Page
+----------------------------------------- */
+
+.single-product .product {
+  /* styles here */
+}
+
+/* Product gallery */
+.woocommerce-product-gallery {
+  /* styles here */
+}
+
+/* 4. Cart Page
+----------------------------------------- */
+.wc-block-cart-items__row,
+.wc-block-components-totals-wrapper,
+.wp-block-woocommerce-cart-order-summary-shipping-block {
+  background: var(--white);
+}
+
+.wc-block-components-button {
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--btn-border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--fast-transition);
+  border: none;
+  position: relative;
+
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+.wc-block-components-button:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* 5. Checkout Page
+----------------------------------------- */
+.woocommerce-checkout .checkout {
+  /* styles here */
+}
+
+/* 6. My Account Pages
+----------------------------------------- */
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  /* styles here */
+}
+
+/* 7. Shop Widgets
+----------------------------------------- */
+.widget_price_filter {
+  /* styles here */
+}
+
+/* 8. Notices and Messages
+----------------------------------------- */
+/* Add to your shop.css */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-notice {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 9999;
+  max-width: 350px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+.woocommerce-message {
+  background-color: #4caf50;
+  color: white;
+  border-left: 4px solid #2e7d32;
+}
+
+.woocommerce-info {
+  background-color: #2196f3;
+  color: white;
+  border-left: 4px solid #0d47a1;
+}
+
+.woocommerce-error {
+  background-color: #f44336;
+  color: white;
+  border-left: 4px solid #b71c1c;
+}
+
+/* Add close button */
+.woocommerce-message::before,
+.woocommerce-info::before,
+.woocommerce-error::before {
+  content: '×';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Auto-hide animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.woocommerce-message.is-hiding,
+.woocommerce-info.is-hiding,
+.woocommerce-error.is-hiding {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+/* Unified Slider Styles for Pet Shop
+----------------------------------------- */
+
+/* Common section styles */
+
+.adoption-carousel-section {
+  margin: 2rem 0;
+}
+.adoption-carousel-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Meta info */
+.pet-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: var(--dark-grey);
+  font-size: 0.9rem;
+}
+
+.pet-type,
+.pet-gender {
+  position: relative;
+}
+
+.pet-type::after {
+  content: '•';
+  position: absolute;
+  right: -9px;
+  color: var(--primary-color);
+}
+
+/* Excerpts */
+.pet-excerpt {
+  /* margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: #555;
+  flex-grow: 1; */
+}
+
+/* Action buttons */
+.pet-actions {
+  text-align: right;
+  margin: 1.5rem;
+  transform: translateY(0.5rem);
+}
+
+.adoption-carousel-section .section-buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* Keep your existing button styles */
+
+/* Slick slider navigation customization */
+.product-carousel .slick-prev,
+.product-carousel .slick-next,
+.adoption-carousel .slick-prev,
+.adoption-carousel .slick-next {
+  border-radius: 50%;
+  z-index: 1;
+}
+.product-carousel .slick-prev,
+.adoption-carousel .slick-prev {
+  transform: translateX(-0.7rem) translateY(-0.7rem);
+}
+
+.product-carousel .slick-prev:before,
+.product-carousel .slick-next:before,
+.adoption-carousel .slick-prev:before,
+.adoption-carousel .slick-next:before {
+  font-size: 2rem;
+  opacity: 1;
+  color: var(--dark-grey);
+  transition: var(--fast-transition);
+}
+.product-carousel .slick-prev:hover:before,
+.product-carousel .slick-next:hover:before,
+.adoption-carousel .slick-prev:hover:before,
+.adoption-carousel .slick-next:hover:before {
+  color: var(--primary-color);
+}
+
+/* Dots styling */
+.product-carousel .slick-dots,
+.adoption-carousel .slick-dots {
+  bottom: -2rem;
+}
+
+.product-carousel .slick-dots li button:before,
+.adoption-carousel .slick-dots li button:before {
+  font-size: 1rem;
+  color: var(--primary-color);
+  transition: var(--fast-transition);
+}
+
+.product-carousel .slick-dots li.slick-active button:before,
+.adoption-carousel .slick-dots li.slick-active button:before {
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .product-carousel-section,
+  .adoption-carousel-section {
+    /* padding: 40px 0; */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-carousel-section,
+  .adoption-carousel-section {
+    padding: 30px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .product-slide,
+  .adoption-slide {
+    padding: 5px;
+  }
+}

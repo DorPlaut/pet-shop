@@ -1,0 +1,306 @@
+/*
+Theme Name: Pet Shop
+Theme URI: http://example.com/
+Author: Your Name
+Author URI: http://example.com/
+Description: Custom pet shop website theme with WooCommerce support
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pet-shop
+*/
+
+/* Reset and Base Styles */
+:root {
+  --primary-color: #eb8a30;
+  --secondary-color: #ffe8d1;
+  --text-color: #333333;
+  --white: #ffffff;
+  --black: #000000;
+  --light-grey: #e6e6e6;
+  --dark-grey: #242424;
+  /* */
+  --nav-height: 3rem;
+  --box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  --fast-transition: all 0.2s ease-in;
+  --slow-transition: all 0.5s ease-in;
+  --logo-size: 10rem;
+
+  --heading-font: 'Fredoka', sans-serif;
+  --body-font: 'Nunito', sans-serif;
+
+  --btn-border-radius: 20px;
+  --border-radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+main {
+  background: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.widget-title,
+.product-title,
+.pet-name {
+  font-family: var(--heading-font);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+/* containers */
+.container {
+  width: calc(100% - 1rem);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.page-content {
+  width: 100%;
+}
+
+/* links and buttons */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--btn-border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--fast-transition);
+  border: none;
+  position: relative;
+}
+
+.btn-primary {
+  background-color: var(--dark-grey);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+.btn-secondary {
+  background-color: var(--primary-color);
+  color: var(--black);
+}
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.btn-tertiary {
+  background-color: var(--light-grey);
+  color: var(--black);
+}
+.btn-tertiary:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* forms and inputs */
+/* Style the select box itself */
+select {
+  border: 1px solid var(--light-grey);
+  padding: 8px 12px;
+  border-radius: var(--btn-border-radius);
+  font-size: 16px;
+  color: var(--dark-grey);
+  transition: var(--fast-transition);
+  cursor: pointer;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6"><path d="M0,0 L12,0 L6,6 Z" fill="%23333"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 30px;
+}
+
+select:hover {
+  border-color: var(--dark-grey);
+  outline: none;
+}
+select:focus {
+  outline: none;
+}
+
+/* general use  */
+.section-title {
+  width: fit-content;
+  position: relative;
+}
+.underline {
+  width: auto;
+  height: 0.2rem;
+  background: var(--primary-color);
+  border-radius: var(--border-radius);
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Accessibility */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: var(--light-grey);
+  clip: auto !important;
+  clip-path: none;
+  color: var(--dark-grey);
+  display: block;
+  font-size: 1rem;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+
+/* Helper Classes */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+.mt-2 {
+  margin-top: 1rem;
+}
+.mt-3 {
+  margin-top: 1.5rem;
+}
+.mt-4 {
+  margin-top: 2rem;
+}
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+.mb-4 {
+  margin-bottom: 2rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 1rem;
+}
+.p-3 {
+  padding: 1.5rem;
+}
+.p-4 {
+  padding: 2rem;
+}
+.p-5 {
+  padding: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+
+/* -------------------------------------------------------------
+ * Responsive Styles (Mobile and Tablet)
+ * ----------------------------------------------------------- */
+
+.mobile-only {
+  display: none;
+}
+.mobile-hidden {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block;
+  }
+}

@@ -57,9 +57,20 @@ function pet_shop_scripts() {
     
     // Third-party libraries
     wp_enqueue_script('three-js', 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', array(), '128', true);
+
+
+    // Enqueue GSAP from CDN
+    wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), '3.12.5', true);
+
+
     
     // Theme-specific scripts
-    wp_enqueue_script('blob-shader', get_template_directory_uri() . '/assets/js/blob-shader.js', array('three-js'), '1.0.0', true);
+
+    wp_enqueue_script('blob-background', get_template_directory_uri() . '/assets/js/blob-background.js', array('gsap'), '1.0.0', true);
+
+
+    // wp_enqueue_script('blob-shader', get_template_directory_uri() . '/assets/js/blob-shader.js', array('three-js'), '1.0.0', true);
+
     wp_enqueue_script('pet-shop-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.0', true);
     
     // Pass PHP variables to JavaScript

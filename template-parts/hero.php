@@ -1,5 +1,7 @@
 <section class="hero">
-    <canvas id="hero-canvas" class="blob-canvas"></canvas>
+    <!-- <canvas id="hero-canvas" class="blob-canvas"></canvas> -->
+       <svg class="blob-background" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+  </svg>
     <div class=" container flex-center">
         <div class="faded-block faded-block-left " ></div>
 <div class=" flex-center hero-content ">

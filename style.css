@@ -136,6 +136,28 @@ a {
   height: 2.5rem;
 }
 
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--light-grey);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark-grey);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}
+
 /* forms and inputs */
 /* Style the select box itself */
 select {

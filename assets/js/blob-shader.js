@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
         u_autoAnimateStrength: { value: config.autoAnimateStrength },
       },
       vertexShader: `
-        precision lowp float;
-        precision lowp int;
+        precision mediump float;
+        precision mediump int;
 
         varying vec2 vUv;
         varying vec3 vertexPosition;
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       `,
       fragmentShader: `
-        precision highp float;
-        precision highp int;
+        precision mediump float;
+        precision mediump  int;
 
         uniform vec2 u_resolution;
         uniform float u_time;

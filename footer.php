@@ -1,6 +1,8 @@
 <footer class="site-footer">
             <div class="faded-block-footer " ></div>
-        <canvas id="footer-canvas" class="blob-canvas"></canvas>
+                   <svg class="blob-background" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+  </svg>
+        <!-- <canvas id="footer-canvas" class="blob-canvas"></canvas> -->
     <!-- Top footer bar with logo and social links -->
     <div class="footer-top-block">
         <div class="container">
